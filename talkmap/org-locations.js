@@ -13,5 +13,10 @@ var addressPoints = [
     "On some new results in filtering theory for jump diffusions<br />Young Researchers in Mathematics (YRM); online",
     43.5904719,
     3.8595132
+  ],
+  [
+    "Signatures and GANs in prediction of diffusion processes<br />61th IEEE Conference on Decision and Control; Cancun, Mexico",
+    21.1527467,
+    -86.8425761
   ]
 ];
