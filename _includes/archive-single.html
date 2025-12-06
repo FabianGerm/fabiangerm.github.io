@@ -34,28 +34,39 @@
       {% endif %}
     </h2>
     
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+        {% if post.read_time %}
+      <p class="page__meta">
+        <i class="fa fa-clock" aria-hidden="true"></i>
+        {% include read-time.html %}
+      </p>
     {% endif %}
 
-        {% if post.collection == 'teaching' %}
-          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif post.collection == "publications" %}
-        {# Publications: only year #}
-          <p class="page__meta">
+    {% if post.collection == "teaching" %}
+      <p class="page__meta">
+        {% if post.type %}{{ post.type }}{% endif %}
+        {% if post.type and post.venue %}, {% endif %}
+        {% if post.venue %}<i>{{ post.venue }}</i>{% endif %}
+        {% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
+      </p>
+
+    {% elsif post.collection == "publications" %}
+      <p class="page__meta">
         {{ post.year | default: post.date | date: "%Y" }}
-          </p>
-        {% elsif post.collection == "talks" %}
-        {# Talks: month + year #}
-          <p class="page__meta">
+      </p>
+
+    {% elsif post.collection == "talks" %}
+      <p class="page__meta">
         {{ post.date | date: "%B %Y" }}
-          </p>
-        {% else %}
-        {# Everything else: full date (or whatever you prefer) #}
-          <p class="page__meta">
+      </p>
+
+    {% else %}
+      {% if post.date %}
+      <p class="page__meta">
         {{ post.date | date: "%B %-d, %Y" }}
-          </p>
-        {% endif %}
+      </p>
+      {% endif %}
+    {% endif %}
+
 
     {% if post.excerpt and site.read_more != 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
