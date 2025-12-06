@@ -20,6 +20,11 @@ var addressPoints = [
     3.8595132
   ],
   [
+    "Recent results on filtering for elliptic, hypoelliptic and general systems<br />2nd SPDEvent; Universit\u00e4t Bielefeld",
+    52.0376829,
+    8.4932878
+  ],
+  [
     "On some new results in filtering theory for jump diffusions<br />Young Researchers in Mathematics (YRM); online",
     43.5904719,
     3.8595132
