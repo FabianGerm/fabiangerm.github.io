@@ -30,6 +30,11 @@ var addressPoints = [
     3.8595132
   ],
   [
+    "Strong existence and uniqueness for SDEs with weak coefficients driven by L\u00e9vy noise<br />3rd SPDEvent; Universit\u00e4t Bielefeld",
+    52.0376829,
+    8.4932878
+  ],
+  [
     "Signatures and GANs in prediction of diffusion processes<br />61th IEEE Conference on Decision and Control; Cancun, Mexico",
     21.1527467,
     -86.8425761
