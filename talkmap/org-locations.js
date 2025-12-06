@@ -38,5 +38,10 @@ var addressPoints = [
     "Strong solutions to L\u00e9vy SDEs<br />York Probability Seminar; York University, UK",
     53.9491976,
     -1.044196
+  ],
+  [
+    "PDE methods in regularization by noise<br />Zagreb Analysis and Probability Seminar; online",
+    43.5904719,
+    3.8595132
   ]
 ];
