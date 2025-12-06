@@ -2,7 +2,7 @@
 title: "Signatures and GANs in prediction of diffusion processes"
 collection: talks
 type: "Talk"
-permalink: /talks/talk4
+permalink: /talks/talk5
 venue: "61th IEEE Conference on Decision and Control"
 date: 2022-12-01
 location: "Cancun, Mexico"
