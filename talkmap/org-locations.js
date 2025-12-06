@@ -33,5 +33,10 @@ var addressPoints = [
     "Signatures and GANs in prediction of diffusion processes<br />61th IEEE Conference on Decision and Control; Cancun, Mexico",
     21.1527467,
     -86.8425761
+  ],
+  [
+    "Strong solutions to L\u00e9vy SDEs<br />York Probability Seminar; York University, UK",
+    53.9491976,
+    -1.044196
   ]
 ];
