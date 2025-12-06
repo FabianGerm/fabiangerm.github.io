@@ -20,6 +20,11 @@ var addressPoints = [
     3.8595132
   ],
   [
+    "An extended variational setting for critical SPDEs with L\u00e9vy noise<br />Workshop on Regularisation by noise; TU Wien",
+    48.1952987,
+    16.3696703
+  ],
+  [
     "Recent results on filtering for elliptic, hypoelliptic and general systems<br />2nd SPDEvent; Universit\u00e4t Bielefeld",
     52.0376829,
     8.4932878
