@@ -1,10 +1,10 @@
 ---
 title: "University of Edinburgh 2019 - 2022"
 collection: teaching
-type: ""
+#type: ""
 permalink: /teaching/teachingedinburgh
-venue: ""
-date: 2019-01-01
+#venue: ""
+#date: 2019-01-01
 location: "Edinburgh"
 ---
 
