@@ -8,8 +8,6 @@ date: 2019-01-01
 location: "Edinburgh"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
-
 MSc courses
 ======
 Stochastic Analysis in Finance (2021 & 2022)
