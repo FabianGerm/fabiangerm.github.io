@@ -5,6 +5,7 @@ permalink: /talks/
 author_profile: true
 ---
 
+
 ## Talks
 
 <ul class="talk-list">
@@ -12,35 +13,40 @@ author_profile: true
   {% for talk in talks %}
   <li class="talk-item">
 
-    {% comment %} TITLE {% endcomment %}
-    {% if talk.title %}
-      <strong>{{ talk.title }}</strong>
-    {% endif %}
-
-    {% comment %} VENUE {% endcomment %}
+    {%- comment -%} LINE 1: VENUE + DATE {%- endcomment -%}
     {% if talk.venue %}
-      — {{ talk.venue }}
+      <strong>{{ talk.venue }}</strong>
     {% endif %}
 
-    {% comment %} DATE (Month Year) {% endcomment %}
     {% if talk.date %}
-      , {{ talk.date | date: "%B %Y" }}
+      — {{ talk.date | date: "%B %Y" }}
     {% endif %}
 
     <br>
 
-    {% comment %} LINKS: slides / paper / video / website {% endcomment %}
+    {%- comment -%} LINE 2: TITLE (normal font) {%- endcomment -%}
+    {% if talk.title %}
+      {{ talk.title }}
+    {% endif %}
+
+    <br>
+
+    {%- comment -%} LINE 3: LINKS {%- endcomment -%}
+    {% assign haslinks = false %}
+
     {% if talk.slides %}
+      {% assign haslinks = true %}
       <a href="{{ talk.slides }}">Slides</a>
     {% endif %}
 
     {% if talk.event_url %}
-      {% if talk.slides %} · {% endif %}
+      {% if haslinks %} · {% endif %}
+      {% assign haslinks = true %}
       <a href="{{ talk.event_url }}">Event page</a>
     {% endif %}
 
     {% if talk.video %}
-      {% if talk.slides or talk.event_url %} · {% endif %}
+      {% if haslinks %} · {% endif %}
       <a href="{{ talk.video }}">Video</a>
     {% endif %}
 
