@@ -3,11 +3,7 @@ title: "Extended Kalman Filter-Based Observer Design for Semilinear Infinite-Dim
 collection: publications
 category: manuscripts
 permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: ''
 date: 2023-01-01
 venue: 'IEEE Transactions on Automatic Control'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/10264154'
-citation: ''
 ---
-
-Using [MathJax](https://www.mathjax.org/) in the description is supported - $$E=mc^2$$ - however, the use must be mindful that the default delimiters are `$$...$$` and `\\[...\\]` which differs from the `$...$` that is typically expected.
