@@ -5,31 +5,19 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-<div class="wordwrap">
-  You can also find my articles on 
-  <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
-</div>
-{% endif %}
-
-## Publications
-
-<ol class="pub-list" reversed>
-  {% assign pubs = site.publications | sort: "year" | reverse %}
-  {% for pub in pubs %}
   <li class="pub-item">
 
-    {% comment %} AUTHORS {% endcomment %}
+    {% comment %} LINE 1: AUTHORS + TITLE {% endcomment %}
     {% if pub.author %}
       {{ pub.author }}.
     {% endif %}
-
-    {% comment %} TITLE {% endcomment %}
     {% if pub.title %}
       <strong>{{ pub.title }}</strong>.
     {% endif %}
 
-    {% comment %} JOURNAL / VENUE {% endcomment %}
+    <br>
+
+    {% comment %} LINE 2: JOURNAL / VENUE + YEAR {% endcomment %}
     {% if pub.journal %}
       <em>{{ pub.journal }}</em>
     {% elsif pub.booktitle %}
@@ -38,31 +26,32 @@ author_profile: true
       <em>{{ pub.venue }}</em>
     {% endif %}
 
-    {% comment %} YEAR {% endcomment %}
     {% if pub.year %}
-      , {{ pub.year }}.
+      , {{ pub.year }}
     {% else %}
-      , {{ pub.date | date: "%Y" }}.
+      , {{ pub.date | date: "%Y" }}
     {% endif %}
 
     <br>
 
-    {% comment %} LINKS {% endcomment %}
+    {% comment %} LINE 3: LINKS {% endcomment %}
+    {% assign haslinks = false %}
+
     {% if pub.paperurl %}
+      {% assign haslinks = true %}
       <a href="{{ pub.paperurl }}">PDF</a>
     {% endif %}
 
     {% if pub.slidesurl %}
-      {% if pub.paperurl %} · {% endif %}
+      {% if haslinks %} · {% endif %}
+      {% assign haslinks = true %}
       <a href="{{ pub.slidesurl }}">Slides</a>
     {% endif %}
 
     {% if pub.bibtexurl %}
-      {% if pub.paperurl or pub.slidesurl %} · {% endif %}
+      {% if haslinks %} · {% endif %}
       <a href="{{ pub.bibtexurl }}">BibTeX</a>
     {% endif %}
 
   </li>
-  {% endfor %}
-</ol>
 
