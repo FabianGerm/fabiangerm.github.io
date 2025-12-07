@@ -15,21 +15,21 @@ author_profile: true
 ## Publications
 
 <ol class="pub-list">
-  {% assign pubs = site.publications | sort: "year" | reverse %}
+  {% assign pubs = site.publications | sort: "year" %}
   {% for pub in pubs %}
   <li class="pub-item">
 
-    {# --- Authors --- #}
+    {% comment %} AUTHORS {% endcomment %}
     {% if pub.author %}
       {{ pub.author }}.
     {% endif %}
 
-    {# --- Title --- #}
+    {% comment %} TITLE {% endcomment %}
     {% if pub.title %}
       <strong>{{ pub.title }}</strong>.
     {% endif %}
 
-    {# --- Journal / Venue --- #}
+    {% comment %} JOURNAL / VENUE {% endcomment %}
     {% if pub.journal %}
       <em>{{ pub.journal }}</em>
     {% elsif pub.booktitle %}
@@ -38,7 +38,7 @@ author_profile: true
       <em>{{ pub.venue }}</em>
     {% endif %}
 
-    {# --- Year --- #}
+    {% comment %} YEAR {% endcomment %}
     {% if pub.year %}
       , {{ pub.year }}.
     {% else %}
@@ -47,7 +47,7 @@ author_profile: true
 
     <br>
 
-    {# --- Links: PDF, Slides, BibTeX --- #}
+    {% comment %} LINKS {% endcomment %}
     {% if pub.paperurl %}
       <a href="{{ pub.paperurl }}">PDF</a>
     {% endif %}
@@ -65,7 +65,3 @@ author_profile: true
   </li>
   {% endfor %}
 </ol>
-
-
-
-
