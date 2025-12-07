@@ -5,12 +5,45 @@ permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+## Talks
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+<ul class="talk-list">
+  {% assign talks = site.talks | sort: "date" | reverse %}
+  {% for talk in talks %}
+  <li class="talk-item">
 
-{% endif %}
+    {% comment %} TITLE {% endcomment %}
+    {% if talk.title %}
+      <strong>{{ talk.title }}</strong>
+    {% endif %}
 
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
+    {% comment %} VENUE {% endcomment %}
+    {% if talk.venue %}
+      — {{ talk.venue }}
+    {% endif %}
+
+    {% comment %} DATE (Month Year) {% endcomment %}
+    {% if talk.date %}
+      , {{ talk.date | date: "%B %Y" }}
+    {% endif %}
+
+    <br>
+
+    {% comment %} LINKS: slides / paper / video / website {% endcomment %}
+    {% if talk.slides %}
+      <a href="{{ talk.slides }}">Slides</a>
+    {% endif %}
+
+    {% if talk.event_url %}
+      {% if talk.slides %} · {% endif %}
+      <a href="{{ talk.event_url }}">Event page</a>
+    {% endif %}
+
+    {% if talk.video %}
+      {% if talk.slides or talk.event_url %} · {% endif %}
+      <a href="{{ talk.video }}">Video</a>
+    {% endif %}
+
+  </li>
+  {% endfor %}
+</ul>
