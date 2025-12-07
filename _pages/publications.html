@@ -6,31 +6,66 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+<div class="wordwrap">
+  You can also find my articles on 
+  <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
+</div>
 {% endif %}
 
-{% include base_path %}
+## Publications
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+<ol class="pub-list">
+  {% assign pubs = site.publications | sort: "year" | reverse %}
+  {% for pub in pubs %}
+  <li class="pub-item">
+
+    {# --- Authors --- #}
+    {% if pub.author %}
+      {{ pub.author }}.
+    {% endif %}
+
+    {# --- Title --- #}
+    {% if pub.title %}
+      <strong>{{ pub.title }}</strong>.
+    {% endif %}
+
+    {# --- Journal / Venue --- #}
+    {% if pub.journal %}
+      <em>{{ pub.journal }}</em>
+    {% elsif pub.booktitle %}
+      <em>{{ pub.booktitle }}</em>
+    {% elsif pub.venue %}
+      <em>{{ pub.venue }}</em>
+    {% endif %}
+
+    {# --- Year --- #}
+    {% if pub.year %}
+      , {{ pub.year }}.
+    {% else %}
+      , {{ pub.date | date: "%Y" }}.
+    {% endif %}
+
+    <br>
+
+    {# --- Links: PDF, Slides, BibTeX --- #}
+    {% if pub.paperurl %}
+      <a href="{{ pub.paperurl }}">PDF</a>
+    {% endif %}
+
+    {% if pub.slidesurl %}
+      {% if pub.paperurl %} · {% endif %}
+      <a href="{{ pub.slidesurl }}">Slides</a>
+    {% endif %}
+
+    {% if pub.bibtexurl %}
+      {% if pub.paperurl or pub.slidesurl %} · {% endif %}
+      <a href="{{ pub.bibtexurl }}">BibTeX</a>
+    {% endif %}
+
+  </li>
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+</ol>
+
 
 
 
