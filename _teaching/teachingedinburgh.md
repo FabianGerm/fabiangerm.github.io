@@ -6,6 +6,7 @@ permalink: /teaching/teachingedinburgh
 #venue: ""
 #date: 2019-01-01
 location: "Edinburgh"
+author_profile: true
 ---
 
 MSc courses
