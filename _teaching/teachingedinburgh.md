@@ -11,12 +11,17 @@ location: "Edinburgh"
 MSc courses
 ======
 Stochastic Analysis in Finance (2021 & 2022)
+
 Discrete Time Finance (2021 & 2022)
 
 BSc courses
 ======
 Honours Differential Equations
+
 Calculus and Applications
+
 Several Variable Calculus and ODEs
+
 Advanced Mathematical Economics
+
 Mathematical Microeconomics 1
