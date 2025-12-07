@@ -14,8 +14,8 @@ author_profile: true
 
 ## Publications
 
-<ol class="pub-list">
-  {% assign pubs = site.publications | sort: "year" %}
+<ol class="pub-list" reversed>
+  {% assign pubs = site.publications | sort: "year" | reverse %}
   {% for pub in pubs %}
   <li class="pub-item">
 
@@ -65,3 +65,4 @@ author_profile: true
   </li>
   {% endfor %}
 </ol>
+
