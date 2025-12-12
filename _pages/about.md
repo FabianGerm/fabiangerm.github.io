@@ -1,13 +1,13 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Welcome to my homepage!"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-Welcome! I'm currently a post-doc in the analysis group at TU Delft. Previously I was a MIGS research fellow at the University of Edinburgh and a post-doc at EPFL Lausanne. I obtained my PhD in December 2022 at the University of Edinburgh under supervision of István Gyöngy.
+I'm currently a post-doc in the analysis group at TU Delft. Previously I was a MIGS research fellow at the University of Edinburgh and a post-doc at EPFL Lausanne. I obtained my PhD in December 2022 at the University of Edinburgh under supervision of István Gyöngy.
 
 My research areas include:
 - Well-posedness theory of SPDEs
