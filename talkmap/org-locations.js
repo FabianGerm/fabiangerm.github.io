@@ -26,8 +26,8 @@ var addressPoints = [
   ],
   [
     "On the regularity of conditional densities<br />Stochastic analysis seminar @ EPFL; EPFL, Lausanne",
-    46.5210594,
-    6.586
+    46.5172426,
+    6.561216
   ],
   [
     "Strong solutions to L\u00e9vy SDEs<br />York Probability Seminar; York University, UK",
@@ -51,8 +51,8 @@ var addressPoints = [
   ],
   [
     "An extended variational setting for critical SPDEs with L\u00e9vy noise<br />Workshop on Regularisation by noise; TU Wien",
-    48.1952987,
-    16.3696703
+    48.1985397,
+    16.3698617
   ],
   [
     "On nonlinear filtering of jump diffusions<br />10th World Congress in Probability and Statistics; online",
