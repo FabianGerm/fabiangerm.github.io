@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome to my homepage!"
+title: "Stochastic analysis and SPDEs"
 author_profile: true
 redirect_from: 
   - /about/
