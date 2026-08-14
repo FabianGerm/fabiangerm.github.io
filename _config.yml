@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Fabian Germ"
 title_separator          : "-"
 name                     : &name "Fabian Germ"
-description              : &description "Fabian Germ's website"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Fabian Germ is a mathematician working on stochastic analysis, stochastic partial differential equations (SPDEs), reaction-diffusion equations, filtering theory, and Lévy noise."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://fabiangerm.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  :  # the subpath of your site, e.g. "/blog"
@@ -24,7 +24,7 @@ repository               : "fabiangerm/fabiangerm.github.io"
 author:
   # Biographic information
   avatar           : "new_cv_pic.jpg"
-  name             : "Sidebar"
+  name             : "Menu"
   pronouns         : # example: "she/her"  
   bio              : "Post-doc in stochastic analysis and SPDEs at TU Delft"
   location         : "Delft"
